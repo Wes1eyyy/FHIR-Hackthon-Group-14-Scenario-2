@@ -7,16 +7,16 @@
 - Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'.
 - Mind Map for our Senario
 
-  **Work need to be done(per person)**
+**Work need to be done(per person)**
 
-  back-end:
+ back-end:
   - Boxplot (User Input: NAME of the disease) (Done by Wesley) 
   - Line chart
   - Scatter chart
 
-  front-end:
+ front-end:
   - User Interface
   - Adjust FastAPI framework with front-end and back-end.
 
-  Other
+ Other
   - Writing report and making video
