@@ -6,7 +6,7 @@
 
 **Code Base Overview**
 - Boxplot_src.py contains the python source code of the boxplot.
-- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'.
+- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'.  (Read This)
 - Mind Map for our Senario
 
 
