@@ -7,7 +7,7 @@
   **Work need to be done(per person)**
 
   back-end:
-  - Boxplot (Done by Wesley) (User Input: NAME of the disease)
+  - Boxplot (User Input: NAME of the disease) (Done by Wesley) 
   - Line chart
   - Scatter chart
 
