@@ -1,16 +1,13 @@
 # Group-14-Senario-2
 
 
-**All Data from HAPI is generated!!!**
 
 
 **Code Base Overview**
 - Boxplot_src.py contains the python source code of the boxplot.
-- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'.  (Read This)
+- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'. 
 - Mind Map for our Senario
 
-
-**Work need to be done(per person)**
 
  back-end:
   - Boxplot (User Input: NAME of the disease) (Done by Wesley) 
