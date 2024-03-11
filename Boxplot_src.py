@@ -49,7 +49,7 @@ def fetch_conditions_and_patients(condition, request_limit=1):
 
     return patient_details
 
-def plot_age_distribution_by_gender(patient_info, condition):
+def plot_age_distribution_by_gender(patient_info, condition, filename='boxplot.png'):
     ages_male = [p['age'] for p in patient_info if p['gender'] == 'male']
     ages_female = [p['age'] for p in patient_info if p['gender'] == 'female']
     
@@ -60,8 +60,10 @@ def plot_age_distribution_by_gender(patient_info, condition):
     ax.set_title(f'{condition} Boxplot Age Distribution by Gender({len(patient_info)} number of patients)')
     ax.set_xlabel('Gender')
     ax.set_ylabel('Age')
-    
-    plt.show()
+    plt.savefig(filename)
+    #plt.show()
+
+    plt.close()
 
 condition = "Asthma"
 Datasets_size = 3  # 1 represents 20 patients ()
