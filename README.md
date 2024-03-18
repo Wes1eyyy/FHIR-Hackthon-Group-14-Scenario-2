@@ -26,8 +26,7 @@ Our group explores the benefits of visualizing Fast Healthcare Interoperability 
   - Boxplot (User Input: NAME of the disease) (Done by Wesley)
   - Bar Chart (Done by Deependra)
   - Line GRAPH (Done by Deependra)
-  - Scatter chart
 
- front-end:
+ front-end(the code is in another branch):
   - User Interface
   - Adjust FastAPI framework with front-end and back-end.
