@@ -16,7 +16,9 @@ Our group explores the benefits of visualizing Fast Healthcare Interoperability 
 
 **Code Base Overview**
 - Boxplot_src.py contains the python source code of the boxplot.
-- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'. 
+- Boxplot_code_Intro.ipynb contains the Introduction, parameters, AI comments and example result graph for Disease: 'Asthma'.
+- BarChart.py contains the python source code of the bar chart with the intial result for Disease: 'Asthma'
+- LineGraph.py contains the python source code of the line graph with the intial result for Disease: 'Asthma'
 - Mind Map for our Senario
 
 
