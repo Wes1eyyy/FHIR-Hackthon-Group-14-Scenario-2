@@ -1,5 +1,30 @@
 // SIDEBAR TOGGLE
 
+const mean = (arr) => arr.reduce((s, c) => s + c, 0) / arr.length;
+
+const zip = (a, b) => a.map((k, i) => [k, b[i]]);
+
+const mul_sum = (a, b) => zip(a, b).reduce((c, d) => d[0] * d[1] + c, 0);
+
+const linear_regression = (x, y) => {
+  const len = x.length;
+
+  const x_mean = mean(x);
+  const y_mean = mean(y);
+
+  const xy_dev = mul_sum(x, y) - len * x_mean * y_mean;
+  const xx_dev = mul_sum(x, x) - len * x_mean * x_mean;
+  console.log(xy_dev);
+
+  const m = xy_dev / xx_dev;
+  return {
+    m: m,
+    b: y_mean - m * x_mean
+  };
+};
+
+const eval_regression = (reg, xs) => xs.map((x, _) => reg.m * x + reg.b);
+
 let sidebarOpen = false;
 const sidebar = document.getElementById('sidebar');
 
@@ -64,17 +89,26 @@ const barChart = new ApexCharts(
 );
 barChart.render();
 
+const data = [31, 40, 28, 51, 42, 109, 100];
+const x = [0, 1, 2, 3, 4, 5, 6];
+const reg = linear_regression(x, data);
+const reg_data = eval_regression(reg, x);
+
 // AREA CHART
 const areaChartOptions = {
   series: [
     {
       name: 'DiseaseCount1',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      data: data,
     },
     {
       name: 'DiseaseCount2',
       data: [11, 32, 45, 32, 34, 52, 41],
     },
+    {
+      name: "Regression",
+      data: reg_data,
+    }
   ],
   chart: {
     height: 350,
@@ -83,7 +117,7 @@ const areaChartOptions = {
       show: false,
     },
   },
-  colors: ['#4f35a1', '#246dec'],
+  colors: ['#4f35a1', '#246dec', '#246'],
   dataLabels: {
     enabled: false,
   },
