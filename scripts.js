@@ -4,7 +4,7 @@ const mean = (arr) => arr.reduce((s, c) => s + c, 0) / arr.length;
 
 const zip = (a, b) => a.map((k, i) => [k, b[i]]);
 
-const mul_sum = (a, b) => zip(a, b).reduce((c, d) => d[0] * d[1] + c, 0);
+const mul_sum = (a, b, am, bm) => zip(a, b).reduce((c, d) => (d[0] - am) * (d[1] - bm) + c, 0);
 
 const linear_regression = (x, y) => {
   const len = x.length;
@@ -12,9 +12,8 @@ const linear_regression = (x, y) => {
   const x_mean = mean(x);
   const y_mean = mean(y);
 
-  const xy_dev = mul_sum(x, y) - len * x_mean * y_mean;
-  const xx_dev = mul_sum(x, x) - len * x_mean * x_mean;
-  console.log(xy_dev);
+  const xy_dev = mul_sum(x, y, x_mean, y_mean);
+  const xx_dev = mul_sum(x, x, x_mean, x_mean);
 
   const m = xy_dev / xx_dev;
   return {
